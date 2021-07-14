@@ -1,16 +1,19 @@
 {
   "name": "sleepy-pine",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "author": "PineAG",
   "license": "MIT",
   "dependencies": {
+    "chromium-revision": "^1.0.0",
     "parcel": "^2.0.0-beta.2",
     "pug": "^3.0.2",
     "sass": "^1.35.2"
   },
   "scripts": {
-    "serve": "parcel serve --host 0.0.0.0 index.pug"
+    "serve": "parcel serve --host 0.0.0.0 index.pug",
+    "build": "parcel build index.pug",
+    "render": "render -i dist/index.html  --name app"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "2.0.0-beta.2",
