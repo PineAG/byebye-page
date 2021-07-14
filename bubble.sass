@@ -1,0 +1,148 @@
+$render_bubble_x_fix: 25px
+$bubble_start_y: 1000px
+@mixin render-bubble($duration, $delay, $x, $scale, $popdelay, $angle)
+  transform: translateX($x+$render_bubble_x_fix) scale($scale)
+  g.bubble-body
+    animation-duration: $duration
+    animation-delay: $delay
+    animation-timing-function: ease-out
+    animation-iteration-count: infinite
+    mix-blend-mode: color-burn
+    animation-name: bubble_float
+    circle.back
+      r: 13px
+      fill: white
+      fill-opacity: 0.9
+    circle.pop
+      r: 12px
+      fill-opacity: 0.7
+      animation-duration: 2s
+      animation-delay: $popdelay
+      animation-direction: alternate
+      animation-timing-function: ease-in-out
+      animation-iteration-count: infinite
+      mix-blend-mode: color-burn
+      transform: translateY(-100px)
+    circle.b1
+      animation-name: circle_pop_1
+      animation-delay: 0s
+      fill: #00ffff
+    circle.b2
+      animation-name: circle_pop_2
+      animation-delay: 0.3s
+      fill: #ff00ff
+    circle.b3
+      animation-name: circle_pop_3
+      animation-delay: 0.7s
+      fill: #ffff00
+
+@keyframes bubble_float
+  0%
+    transform: translateY($bubble_start_y)
+  100%
+    transform: translateY(-30px)
+
+@keyframes circle_pop_1
+  0%
+    transform: rotate(60deg) translate(5px, 0) 
+  100%
+    transform: rotate(60deg) translate(-5px, 0) 
+@keyframes circle_pop_2
+  0%
+    transform: rotate(15deg) translate(5px, 0) 
+  100%
+    transform: rotate(15deg) translate(-5px, 0) 
+@keyframes circle_pop_3
+  0%
+    transform: rotate(136deg) translate(5px, 0) 
+  100%
+    transform: rotate(136deg) translate(-5px, 0) 
+
+#bubble1
+  @include render-bubble(11s, 0s, 209px, 1.0, 0, 0deg)
+#bubble2
+  @include render-bubble(7s, 0.6s, 172px, 0.7, 0.03, 13deg)
+#bubble3
+  @include render-bubble(11s, 5.1s, 104px, 0.9, 0.05, 17deg)
+#bubble4
+  @include render-bubble(13s, 6.2s, 153px, 1.2, 0.12, 37deg)
+#bubble5
+  @include render-bubble(5s, 2.7s, 150px, 0.6, 0.2, 41deg)
+#bubble6
+  @include render-bubble(7s, 1.3s, 132px, 0.7, 0.23, 19deg)
+#bubble7
+  @include render-bubble(8s, 4.3s, 136px, 0.8, 0.17, 23deg)
+#bubble8
+  @include render-bubble(11s, 3.1s, 103px, 1.1, 0.07, 17deg)
+#bubble9
+  @include render-bubble(5s, 1.6s, 115px, 0.6, 0.15, 37deg)
+#bubble10
+  @include render-bubble(7s, 2.3s, 147px, 0.9, 0.19, 31deg)
+
+
+g.bubble-home
+  animation: 7s 0s ease infinite top_circle_float
+  circle.back
+    r: 853px
+    fill: white
+    fill-opacity: 0.9
+    animation: 3s 0s ease infinite top_circle_twist
+  circle.pop
+    r: 850px
+    fill-opacity: 0.7
+    animation-delay: 0s
+    animation-timing-function: ease
+    animation-iteration-count: infinite
+    mix-blend-mode: color-burn
+    transform: translateY(-100px)
+  circle.b1
+    animation-duration: 7.9s
+    animation-name: top_circle_pop
+    animation-delay: 0s
+    fill: #00ffff
+  circle.b2
+    animation-name: top_circle_pop
+    animation-duration: 6.7s
+    animation-delay: 0.3s
+    fill: #ff00ff
+  circle.b3
+    animation-name: top_circle_pop
+    animation-duration: 8.3s
+    animation-delay: 0.7s
+    fill: #ffff00
+$top_circle_pop_scale: 0.1
+@keyframes top_circle_pop
+  0%
+    transform: rotate(30deg) translate(10px, 0) skew($top_circle_pop_scale*2deg, $top_circle_pop_scale*1deg)
+  27%
+    transform: rotate(150deg) translate(13px, 0) skew($top_circle_pop_scale*3deg, $top_circle_pop_scale*2deg)
+  61%
+    transform: rotate(270deg) translate(7px, 0) skew($top_circle_pop_scale*1deg, $top_circle_pop_scale*3deg)
+  100%
+    transform: rotate(390deg) translate(10px, 0) skew($top_circle_pop_scale*2deg, $top_circle_pop_scale*1deg)
+
+@keyframes top_circle_twist
+  0%
+    transform: skew(0, 0)
+  27%
+    transform: skew(-2deg*$top_circle_pop_scale, 0)
+  53%
+    transform: skew(3deg*$top_circle_pop_scale, 2deg*$top_circle_pop_scale)
+  81%
+    transform: skew(0, -3deg*$top_circle_pop_scale)
+  100%
+    transform: skew(0, 0)
+  
+$top_circle_float_x: 150px
+$top_circle_float_y: -750px
+@keyframes top_circle_float
+  0%
+    transform: translate($top_circle_float_x, $top_circle_float_y) scale(1.0)
+  26%
+    transform: translate($top_circle_float_x, $top_circle_float_y + 7px) scale(1.005)
+  50%
+    transform: translate($top_circle_float_x, $top_circle_float_y + 10px) scale(1.01)
+  75%
+    transform: translate($top_circle_float_x, $top_circle_float_y + 7px) scale(1.007)
+  100%
+    transform: translate($top_circle_float_x, $top_circle_float_y) scale(1.0)

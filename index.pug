@@ -1,0 +1,34 @@
+doctype html
+html(lang="zh_CN")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.sass")
+    link(rel="stylesheet", href="bubble.sass")
+    title PineAG
+  body
+    div#app
+      svg#background(width='100%', height='100%')
+        - var i=0
+        while i++ < 10
+          g(id=`bubble${i}`)
+            g.bubble-body
+              circle.back
+              g.pop-container
+                circle.pop.b1
+                circle.pop.b2
+                circle.pop.b3
+        g.bubble-home
+          circle.back
+          g.pop-container
+            circle.pop.b1
+            circle.pop.b2
+            circle.pop.b3
+        g.progress
+          each cls in ['main', 'left', 'right']
+            g(class=cls)
+              - var i=0
+                while i++ < 36
+                  path.leaf(class=`leaf-${i}`, d=`m -2 60 l -2 20 a 80.6,80.6 0 0,0 8,0 l -2 -20 z`)
+      img#pine(src="pine_white.gif")
