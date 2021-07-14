@@ -1,0 +1,98 @@
+@font-face
+  font-family: 'MFMingHei'
+  src: url(./MFMingHei.ttf)
+  
+@mixin render-progress($speed, $progress_color)
+  g.circle
+    animation-name: progress-circle-rotate
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+    fill: transparent
+    circle
+      animation-name: progress-circle-extend
+      animation-timing-function: ease-in-out
+      animation-iteration-count: infinite
+      fill: transparent
+  g.circle.outer
+    animation-duration: 1.1s /$speed
+    circle
+      animation-duration: 4.7s /$speed
+      stroke: $progress_color
+      stroke-width: 3px
+      r: 70px
+      opacity: 0.8
+  g.circle.inner
+    animation-duration: 1.7s /$speed
+    animation-direction: reverse
+    circle
+      animation-direction: reverse
+      animation-duration: 6.7s /$speed
+      stroke: $progress_color
+      stroke-width: 10px
+      opacity: 0.4
+      r: 65px
+
+@keyframes progress-circle-extend
+  0%
+    stroke-dasharray: 20%*3 80%*3
+  50%
+    stroke-dasharray: 80%*3 20%*3
+  100%
+    stroke-dasharray: 20%*3 80%*3
+@keyframes progress-circle-rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+svg.progress-container
+  width: 150px
+  height: 150px
+  transform: scale(0.8)
+  g.progress
+    transform: translate(75px, 75px)
+  g#progress1
+    @include render-progress(1, white)
+  g#progress2
+    @include render-progress(1.3, white)
+  g#progress3
+    @include render-progress(0.7, white)
+
+.dashboard
+  position: absolute
+  bottom: 100px
+  right: 100px
+  display: grid
+  grid-template-rows: 1fr 1fr 1fr
+  // grid-row-gap: 5px
+  transform-style: preserve-3d
+  perspective-origin: 50% 50%
+  perspective: 300px
+  .item
+    grid-template-columns: 1fr 3fr
+    transform-origin: left
+    transform: rotateY(-8deg) rotateZ(5deg) scale(0.8)
+    display: grid
+    .title-container
+      display: grid
+      place-items: center start
+      .title
+        color: white
+        text-align: left
+        font-family: 'MFMingHei'
+        letter-spacing: 2px
+        .main
+          font-size: 45px
+
+.dashboard.shadow1
+  opacity: 0.1
+  mix-blend-mode: color-dodge
+  filter: brightness(0.5) sepia(100%) hue-rotate(130deg) saturate(180%) contrast(70)
+  .item
+    transform: rotateY(-8deg) rotateZ(5deg) scale(0.8)translateZ(-15px)
+.dashboard.shadow2
+  opacity: 0.1
+  mix-blend-mode: color-dodge
+  filter: brightness(0.5) sepia(100%) hue-rotate(290deg) saturate(180%) contrast(70)
+  .item
+    transform: rotateY(-8deg) rotateZ(5deg) scale(0.8) translateZ(-18px)

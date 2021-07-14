@@ -6,10 +6,12 @@ html(lang="zh_CN")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="index.sass")
     link(rel="stylesheet", href="bubble.sass")
+    link(rel="stylesheet", href="progress.sass")
     title PineAG
   body
     div#app
       svg#background(width='100%', height='100%')
+      svg#bubbles.bubble-effect(width='100%', height='100%')
         - var i=0
         while i++ < 10
           g(id=`bubble${i}`)
@@ -25,10 +27,17 @@ html(lang="zh_CN")
             circle.pop.b1
             circle.pop.b2
             circle.pop.b3
-        g.progress
-          each cls in ['main', 'left', 'right']
-            g(class=cls)
-              - var i=0
-                while i++ < 36
-                  path.leaf(class=`leaf-${i}`, d=`m -2 60 l -2 20 a 80.6,80.6 0 0,0 8,0 l -2 -20 z`)
+      each dtype in ['shadow1', 'shadow2', 'main']
+        div(class=`dashboard ${dtype}`)
+          each title, index in ['上传记忆日志...', '重置外部服务上下文...', '即将进入节能模式...']
+            .item
+              svg.progress-container
+                g.progress(id=`progress${index+1}`)
+                  g.circle.outer
+                    circle
+                  g.circle.inner
+                    circle
+              .title-container
+                .title
+                  p.main #{title}
       img#pine(src="pine_white.gif")
