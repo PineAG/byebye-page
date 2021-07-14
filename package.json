@@ -12,8 +12,7 @@
   },
   "scripts": {
     "serve": "parcel serve --host 0.0.0.0 index.pug",
-    "build": "parcel build index.pug",
-    "render": "render -i dist/index.html  --name app"
+    "build": "parcel build index.pug"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "2.0.0-beta.2",
