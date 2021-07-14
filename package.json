@@ -1,7 +1,6 @@
 {
   "name": "sleepy-pine",
   "version": "1.0.0",
-  "main": "index.html",
   "author": "PineAG",
   "license": "MIT",
   "dependencies": {
@@ -12,7 +11,7 @@
   },
   "scripts": {
     "serve": "parcel serve --host 0.0.0.0 index.pug",
-    "build": "parcel build index.pug"
+    "build": "parcel build --dist-dir dist index.pug"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "2.0.0-beta.2",
