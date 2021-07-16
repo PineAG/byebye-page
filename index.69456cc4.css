@@ -1,0 +1,566 @@
+#bubbles {
+  fill: transparent;
+  filter: contrast(10);
+  background-color: black;
+  mix-blend-mode: screen;
+}
+
+@keyframes bubble_float {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes circle_pop_1 {
+  0% {
+    transform: rotate(60deg) translate(5px, 0);
+  }
+  100% {
+    transform: rotate(60deg) translate(-5px, 0);
+  }
+}
+@keyframes circle_pop_2 {
+  0% {
+    transform: rotate(15deg) translate(5px, 0);
+  }
+  100% {
+    transform: rotate(15deg) translate(-5px, 0);
+  }
+}
+@keyframes circle_pop_3 {
+  0% {
+    transform: rotate(136deg) translate(5px, 0);
+  }
+  100% {
+    transform: rotate(136deg) translate(-5px, 0);
+  }
+}
+#bubble1 {
+  filter: blur(5px);
+  transform: translateX(329px) scale(1);
+}
+#bubble1 g.bubble-body {
+  animation-duration: 11s;
+  animation-delay: 0s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble1 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble1 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble1 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble1 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble1 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble2 {
+  filter: blur(5px);
+  transform: translateX(292px) scale(0.7);
+}
+#bubble2 g.bubble-body {
+  animation-duration: 7s;
+  animation-delay: 0.6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble2 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble2 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.03;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble2 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble2 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble2 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble3 {
+  filter: blur(5px);
+  transform: translateX(224px) scale(0.9);
+}
+#bubble3 g.bubble-body {
+  animation-duration: 11s;
+  animation-delay: 5.1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble3 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble3 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.05;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble3 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble3 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble3 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble4 {
+  filter: blur(5px);
+  transform: translateX(273px) scale(1.2);
+}
+#bubble4 g.bubble-body {
+  animation-duration: 13s;
+  animation-delay: 6.2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble4 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble4 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.12;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble4 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble4 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble4 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble5 {
+  filter: blur(5px);
+  transform: translateX(270px) scale(0.6);
+}
+#bubble5 g.bubble-body {
+  animation-duration: 5s;
+  animation-delay: 2.7s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble5 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble5 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble5 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble5 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble5 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble6 {
+  filter: blur(5px);
+  transform: translateX(252px) scale(0.7);
+}
+#bubble6 g.bubble-body {
+  animation-duration: 7s;
+  animation-delay: 1.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble6 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble6 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.23;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble6 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble6 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble6 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble7 {
+  filter: blur(5px);
+  transform: translateX(256px) scale(0.8);
+}
+#bubble7 g.bubble-body {
+  animation-duration: 8s;
+  animation-delay: 4.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble7 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble7 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.17;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble7 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble7 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble7 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble8 {
+  filter: blur(5px);
+  transform: translateX(223px) scale(1.1);
+}
+#bubble8 g.bubble-body {
+  animation-duration: 11s;
+  animation-delay: 3.1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble8 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble8 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.07;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble8 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble8 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble8 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble9 {
+  filter: blur(5px);
+  transform: translateX(235px) scale(0.6);
+}
+#bubble9 g.bubble-body {
+  animation-duration: 5s;
+  animation-delay: 1.6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble9 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble9 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.15;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble9 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble9 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble9 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+#bubble10 {
+  filter: blur(5px);
+  transform: translateX(267px) scale(0.9);
+}
+#bubble10 g.bubble-body {
+  animation-duration: 7s;
+  animation-delay: 2.3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  animation-name: bubble_float;
+}
+#bubble10 g.bubble-body circle.back {
+  r: 13px;
+  fill: white;
+  fill-opacity: 0.9;
+}
+#bubble10 g.bubble-body circle.pop {
+  r: 12px;
+  fill-opacity: 0.7;
+  animation-duration: 2s;
+  animation-delay: 0.19;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+#bubble10 g.bubble-body circle.b1 {
+  animation-name: circle_pop_1;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+#bubble10 g.bubble-body circle.b2 {
+  animation-name: circle_pop_2;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+#bubble10 g.bubble-body circle.b3 {
+  animation-name: circle_pop_3;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+g.bubble-home {
+  filter: blur(5px);
+  animation: 7s 0s ease infinite top_circle_float;
+}
+g.bubble-home circle.back {
+  r: 853px;
+  fill: white;
+  fill-opacity: 0.9;
+  animation: 3s 0s ease infinite top_circle_twist;
+}
+g.bubble-home circle.pop {
+  r: 850px;
+  fill-opacity: 0.7;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
+  transform: translateY(-100px);
+}
+g.bubble-home circle.b1 {
+  animation-duration: 7.9s;
+  animation-name: top_circle_pop;
+  animation-delay: 0s;
+  fill: #00ffff;
+}
+g.bubble-home circle.b2 {
+  animation-name: top_circle_pop;
+  animation-duration: 6.7s;
+  animation-delay: 0.3s;
+  fill: #ff00ff;
+}
+g.bubble-home circle.b3 {
+  animation-name: top_circle_pop;
+  animation-duration: 8.3s;
+  animation-delay: 0.7s;
+  fill: #ffff00;
+}
+
+@keyframes top_circle_pop {
+  0% {
+    transform: rotate(30deg) translate(10px, 0) skew(0.2deg, 0.1deg);
+  }
+  27% {
+    transform: rotate(150deg) translate(13px, 0) skew(0.3deg, 0.2deg);
+  }
+  61% {
+    transform: rotate(270deg) translate(7px, 0) skew(0.1deg, 0.3deg);
+  }
+  100% {
+    transform: rotate(390deg) translate(10px, 0) skew(0.2deg, 0.1deg);
+  }
+}
+@keyframes top_circle_twist {
+  0% {
+    transform: skew(0, 0);
+  }
+  27% {
+    transform: skew(-0.2deg, 0);
+  }
+  53% {
+    transform: skew(0.3deg, 0.2deg);
+  }
+  81% {
+    transform: skew(0, -0.3deg);
+  }
+  100% {
+    transform: skew(0, 0);
+  }
+}
+@keyframes top_circle_float {
+  0% {
+    transform: translate(250px, -750px) scale(1);
+  }
+  26% {
+    transform: translate(250px, -743px) scale(1.005);
+  }
+  50% {
+    transform: translate(250px, -740px) scale(1.01);
+  }
+  75% {
+    transform: translate(250px, -743px) scale(1.007);
+  }
+  100% {
+    transform: translate(250px, -750px) scale(1);
+  }
+}
+/*# sourceMappingURL=index.69456cc4.css.map */
