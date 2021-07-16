@@ -11,9 +11,9 @@
   },
   "scripts": {
     "serve": "parcel serve --host 0.0.0.0 index.pug",
-    "build": "parcel build --dist-dir dist index.pug",
-    "build-static": "parcel build --dist-dir dist --public-url '.' index.pug",
-    "build-gh-pages": "parcel build --dist-dir dist --public-url '/byebye-page' index.pug"
+    "build": "parcel build --dist-dir dist --no-minify index.pug",
+    "build-static": "parcel build --dist-dir dist --no-minify --public-url '.' index.pug",
+    "build-gh-pages": "parcel build --dist-dir dist --no-minify --public-url '/byebye-page' index.pug"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "2.0.0-beta.2",
